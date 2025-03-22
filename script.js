@@ -180,11 +180,12 @@ keepScoreBtn.addEventListener("click", () => {
         alert(`Final score: ${score}`);
         resetGame();
       }, 500);
+    } else {
+      resetRadioOptions();
+      resetRolls();
+      round++;
+      roundElement.textContent = round;
     }
-    resetRadioOptions();
-    resetRolls();
-    round++;
-    roundElement.textContent = round;
   } else {
     alert("Please select an option.");
   }
